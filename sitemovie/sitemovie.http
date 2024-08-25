@@ -1,0 +1,6 @@
+@sitemovie_HostAddress = http://localhost:5273
+
+GET {{sitemovie_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
