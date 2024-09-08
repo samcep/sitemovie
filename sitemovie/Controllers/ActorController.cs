@@ -70,11 +70,11 @@ namespace sitemovie.Controllers
 
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Delete(int id)
-        {NotFound();
+        {
             var exists = await _dbContext.Actors.AnyAsync(g => g.Id == id);
             if (!exists)
             {
-                return 
+                return NotFound();
             }
             _dbContext.Remove(new Actor() { Id = id });
             await _dbContext.SaveChangesAsync();
