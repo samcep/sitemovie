@@ -5,7 +5,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+                .AddNewtonsoftJson();
 builder.Services.AddDbContext<SqlServerDbContext>(options => options.UseSqlServer("name=DefaultConnection"));
 builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();

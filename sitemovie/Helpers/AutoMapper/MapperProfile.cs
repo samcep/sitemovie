@@ -11,6 +11,9 @@ namespace sitemovie.Helpers.AutoMapper
         {
             CreateMap<Genre ,GenreDto>().ReverseMap();
             CreateMap<GenreCreateDto, Genre>();
+            CreateMap<ActorCreateDto, Actor>();
+            CreateMap<Actor, ActorDto>().ReverseMap();
+            CreateMap<ActorPatchDto, Actor>().ReverseMap();
         }
     }
 }
